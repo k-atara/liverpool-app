@@ -10,10 +10,10 @@ import NuevoUsuario from './src/components/NuevoUsuario';
 
 export default function App() {
   return (
-    <Home/>
+    //<Home/>
     //<Login/>
     //<Inicio/>
     //<Cliente/>
-    //<NuevoUsuario/>
+    <NuevoUsuario/>
   );
 }

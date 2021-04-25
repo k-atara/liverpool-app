@@ -4,28 +4,38 @@ import {Header}  from './sections/Header';
 
 export default function NuevoUsuario() {
     return (
-      <View style={styles.container}>
+      <View>
         <Header message='Press to login'/>
-        <Image
-            style={styles.tinyLogo}
-            source={require('./../img/logo1.png')}
-        />
-        <Text style={styles.textTitle}>¡No eres cliente de Liverpool, pero estas a un paso de serlo!</Text>
-        <Text style={styles.textSubTitle}>Te estas perdiendo miles de ofertas y ahorros, ¡No esperes más!</Text>
-        <View style={styles.buttonContainer}>
-            <Button
-                onPress={() => {
-                    alert('You tapped the button!');
-                }}
-                title="Registrarse"
-                color="#E10098"
+        <View style={styles.container}>
+            <Image
+                style={styles.tinyLogo}
+                source={require('./../img/logo1.png')}
             />
+            <Text style={styles.textTitle}>¡No eres cliente de Liverpool,</Text> 
+            <Text style={styles.textTitle}>pero estas a un paso de serlo!</Text>
+            <Text style={styles.textSubTitle}>Te estas perdiendo miles de ofertas</Text>
+            <Text style={styles.textSubTitle}>y ahorros, ¡No esperes más!</Text>
+            <View style={styles.buttonContainer}>
+                <Button
+                    onPress={() => {
+                        alert('You tapped the button!');
+                    }}
+                    title="Registrarse"
+                    color="#E10098"
+                />
+            </View>
         </View>
       </View>
     );
 }
 
 const styles = StyleSheet.create({
+    mainContainer: {
+        flex: 1,
+        backgroundColor: '#fff',
+        alignItems: 'center',
+        justifyContent: 'center',
+      },
     container: {
       flex: 1,
       backgroundColor: '#fff',
@@ -35,14 +45,14 @@ const styles = StyleSheet.create({
     textTitle: {
       color: '#E10098',
       fontWeight: 'bold',
-      fontSize: 30,
-      margin: 20
+      fontSize: 20,
+      marginBottom: 5,
     },
     textSubTitle: {
         color: 'black',
         fontWeight: 'bold',
-        fontSize: 20,
-        margin: 10
+        fontSize: 15,
+        margin: 5
     },
     buttonContainer: {
         margin: 20
