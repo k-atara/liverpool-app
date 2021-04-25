@@ -5,6 +5,7 @@ import Home from './src/components/Home';
 import Login from './src/components/Login';
 import Inicio from './src/components/Inicio';
 import Cliente from './src/components/Cliente';
+import NuevoUsuario from './src/components/NuevoUsuario';
 
 
 export default function App() {
@@ -13,5 +14,6 @@ export default function App() {
     //<Login/>
     //<Inicio/>
     //<Cliente/>
+    //<NuevoUsuario/>
   );
 }
