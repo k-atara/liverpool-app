@@ -1,20 +1,27 @@
 import React from 'react';
-import { StyleSheet, Text, View, Button, Image, TextInput  } from 'react-native';
+import {  FlatList, StyleSheet, Text, View, Button, Image, TextInput  } from 'react-native';
 
-export default function Login() {
+export default function Beneficios() {
     return (
       <View style={styles.container}>
         <Image
             style={styles.tinyLogo}
             source={require('./../img/logo1.png')}
         />
-        <Text style={styles.textSubTitle}>Encontramos tu cuenta</Text>
-        <Text style={styles.textTitle}>¡Inicia sesión!</Text>
         
-        <TextInput
-            style={styles.input}
-            placeholder="Password"
-            keyboardType="default"
+        <Text style={styles.textTitle}>Beneficios</Text>
+        <Text style={styles.textSubTitle}>De tarjetahabientes</Text>
+
+        <FlatList
+        data={[
+          {key: '✤ 10% de descuento adicional en tu primer día de compras en tienda.'},
+          {key: '✤ 10% de descuento adicional en tu primer día de compras en liverpool.com.mx'},
+          {key: '✤ Sin costo por apertura ni anualidad.'},
+          {key: '✤ Tarjetas Adicionales sin costo'},
+          {key: '✤ Mesa de regalos'},
+          {key: '✤ Puntos'},
+        ]}
+        renderItem={({item}) => <Text style={styles.item}>{item.key}</Text>}
         />
 
         <View style={styles.buttonContainer}>
@@ -22,7 +29,7 @@ export default function Login() {
                 onPress={() => {
                     alert('You tapped the button!');
                 }}
-                title="Iniciar sesión"
+                title="¡Obtener ahora!"
                 color="#E10098"
             />
         </View>
@@ -41,7 +48,7 @@ const styles = StyleSheet.create({
       color: '#E10098',
       fontWeight: 'bold',
       fontSize: 30,
-      margin: 20
+      margin: 10
     },
     textSubTitle: {
         color: 'black',
@@ -62,5 +69,13 @@ const styles = StyleSheet.create({
         height: 40,
         margin: 12,
         borderWidth: 0.5,
+      },
+      item: {
+        marginRight: 30,
+        marginLeft: 30,
+        marginTop: 20,
+        marginBottom: 20,
+        fontSize: 18,
+        height: 50,
       },
   });

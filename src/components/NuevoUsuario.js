@@ -1,12 +1,15 @@
 import React from 'react';
 import { StyleSheet, Text, View, Button, Image } from 'react-native';
-import {Header}  from './sections/Header';
+
 
 export default function NuevoUsuario() {
     return (
       <View>
-        <Header message='Press to login'/>
         <View style={styles.container}>
+            <Image
+                style={styles.img}
+                source={require('./../img/bc01_190421mue.jpg')}
+            />
             <Image
                 style={styles.tinyLogo}
                 source={require('./../img/logo1.png')}
@@ -52,15 +55,19 @@ const styles = StyleSheet.create({
         color: 'black',
         fontWeight: 'bold',
         fontSize: 15,
-        margin: 5
+        margin: 5,
     },
     buttonContainer: {
-        margin: 20
+        margin: 20,
+    },
+    img: {
+      width: '100%', 
+      height: '150%',
     },
     tinyLogo: {
-        width: 500,
-        height: 80,
-        resizeMode: 'center',
-        margin: 50
-    },
+      width: 500,
+      height: 80,
+      resizeMode: 'center',
+      margin: 20,
+  },
   });

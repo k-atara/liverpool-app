@@ -1,11 +1,18 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import {Header}  from './sections/Header';
+import { StyleSheet, Text, View, Image, TextInput } from 'react-native';
 
 export default function Home() {
     return (
-      <View style={styles.container}>
-        <Text style={styles.textTitle}>Liverpool es parte de mi vida</Text>
-        <Text>This is a new app</Text>
+      <View>
+        <Header message='Shop'/>
+        <View style={styles.container}>
+          <TextInput
+              style={styles.input}
+              placeholder="Buscar"
+              keyboardType="default"
+          />
+        </View>
       </View>
     );
 }
@@ -18,8 +25,13 @@ const styles = StyleSheet.create({
       justifyContent: 'center',
     },
     textTitle: {
-      color: 'pink',
+      color: '#E10098',
       fontWeight: 'bold',
       fontSize: 30,
+    },
+    input: {
+      height: 40,
+      margin: 12,
+      borderWidth: 0.5,
     },
   });
