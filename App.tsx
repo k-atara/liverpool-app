@@ -6,11 +6,13 @@ import Login from './src/components/Login';
 import Inicio from './src/components/Inicio';
 import Cliente from './src/components/Cliente';
 import NuevoUsuario from './src/components/NuevoUsuario';
+import OffersHome from './src/components/OffersHome';
 
 
 export default function App() {
   return (
-    <Home/>
+    //<Home/>
+    <OffersHome/>
     //<Login/>
     //<Inicio/>
     //<Cliente/>
