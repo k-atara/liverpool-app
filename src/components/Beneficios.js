@@ -1,45 +1,122 @@
 import React from 'react';
-import {  FlatList, StyleSheet, Text, View, Button, Image, TextInput  } from 'react-native';
+import {  FlatList, StyleSheet, Text, View, Button, Image, Modal } from 'react-native';
+import Dialog, { DialogContent } from 'react-native-popup-dialog';
 
-export default function Beneficios() {
-    return (
-      <View style={styles.container}>
-        <Image
-            style={styles.tinyLogo}
-            source={require('./../img/logo1.png')}
-        />
-        
-        <Text style={styles.textTitle}>Beneficios</Text>
-        <Text style={styles.textSubTitle}>De tarjetahabientes</Text>
+export class Beneficios extends React.Component {
 
-        <FlatList
-        data={[
-          {key: '✤ 10% de descuento adicional en tu primer día de compras en tienda.'},
-          {key: '✤ 10% de descuento adicional en tu primer día de compras en liverpool.com.mx'},
-          {key: '✤ Sin costo por apertura ni anualidad.'},
-          {key: '✤ Tarjetas Adicionales sin costo'},
-          {key: '✤ Mesa de regalos'},
-          {key: '✤ Puntos'},
-        ]}
-        renderItem={({item}) => <Text style={styles.item}>{item.key}</Text>}
-        />
+    constructor(){
+        super();
+        this.state = {visible: false};
+    }
 
-        <View style={styles.buttonContainer}>
+    render(){
+        return(
+            <View style={styles.container}>
+            <Image
+                style={styles.tinyLogo}
+                source={require('./../img/logo1.png')}
+            />
+            
+            <Text style={styles.textTitle}>Beneficios</Text>
+            <Text style={styles.textSubTitle}>De tarjetahabientes</Text>
+
+            <FlatList
+            data={[
+            {key: '✤ 10% de descuento adicional en tu primer día de compras en tienda.'},
+            {key: '✤ 10% de descuento adicional en tu primer día de compras en liverpool.com.mx'},
+            {key: '✤ Sin costo por apertura ni anualidad.'},
+            {key: '✤ Tarjetas Adicionales sin costo'},
+            {key: '✤ Mesa de regalos'},
+            {key: '✤ Puntos'},
+            ]}
+            renderItem={({item}) => <Text style={styles.item}>{item.key}</Text>}
+            />
+            
+            <View style={styles.buttonContainer}>
+                <Button
+                    onPress={() => {this.setState({show:true})}}
+                    title="¡Obtener ahora!"
+                    color="#E10098"
+                />
+            </View>
+
             <Button
                 onPress={() => {
-                    alert('You tapped the button!');
+                    this.setState({ visible: true });
                 }}
-                title="¡Obtener ahora!"
+                title="Show Dialog"
                 color="#E10098"
             />
+            <Dialog
+                visible={this.state.visible}
+                onTouchOutside={() => {
+                this.setState({ visible: false });
+            }}
+            >
+            <DialogContent>
+                    <View  style={{alignItems: 'center', justifyContent: 'center'}}>
+                        <Text style={styles.textTitle}>¡Mantente al tanto!</Text>
+                        <Text style={styles.textSubTitle}>No te pierdas ninguna de las próximas ofertas y ahorra en miles de pproductos</Text>
+                    </View>
+                    <View style={styles.buttonContainer}>
+                        <Button
+                            onPress={() => {
+                                this.setState({visible:false})
+                            }}
+                            title="Ahora si"
+                            color="#E10098"
+                        />
+                    </View>
+                    <View style={styles.buttonContainer}>
+                        <Button
+                            onPress={() => {
+                                this.setState({visible:false})
+                            }}
+                            title="Ahora no"
+                            color="#E10098"
+                        />
+                    </View>
+            </DialogContent>
+            
+            </Dialog>
+
+            <Dialog
+                visible={this.state.visible}
+                onTouchOutside={() => {
+                this.setState({ visible: false });
+            }}
+            >
+            <DialogContent>
+                    <View  style={{alignItems: 'center', justifyContent: 'center'}}>
+                        <Text style={styles.textTitle}>¡Listo!</Text>
+                        <Text style={styles.textSubTitle}>Agrega más productos a tu carrito de compras</Text>
+                    </View>
+                    <View style={styles.buttonContainer}>
+                        <Button
+                            onPress={() => {
+                                this.setState({visible:false})
+                            }}
+                            title="Continuar"
+                            color="#E10098"
+                        />
+                    </View>
+            </DialogContent>
+            
+            </Dialog>
+
+            <View>
+                                
         </View>
-      </View>
-    );
+        </View>
+
+        );
+    }
 }
 
 const styles = StyleSheet.create({
     container: {
       flex: 1,
+      marginTop: 100,
       backgroundColor: '#fff',
       alignItems: 'center',
       justifyContent: 'center',
