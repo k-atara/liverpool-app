@@ -82,7 +82,7 @@ export default function OffersHome() {
                 </View>
                 <View style={styles.cardContainer}>
                     <Card style={styles.card}>
-                        <Image 
+                        <Image
                             style={styles.cardImage}
                             source={require('./../img/logo1.png')}
                         >
@@ -118,17 +118,13 @@ export default function OffersHome() {
                 </View>
             </ScrollView>
         </View>
-        
     );
-}
-
-export const object = {
-    
 }
 
 const styles = StyleSheet.create({
     container: {
         flex: 1,
+        alignItems: 'stretch',
         backgroundColor: '#fff',
         alignItems: 'center',
         textAlignVertical: 'top',
@@ -157,9 +153,10 @@ const styles = StyleSheet.create({
         alignSelf:'baseline'
     },
     fixToText: {
+        flex: 1,
         flexDirection: 'row',
         justifyContent: 'space-between',
         padding: 4,
-        textAlignHorizontal: 'center',
+        alignSelf: 'stretch',
     },
 });
