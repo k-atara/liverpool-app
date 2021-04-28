@@ -5,12 +5,15 @@ import Home from './src/components/Home';
 import {Beneficios} from './src/components/Beneficios';
 import Cliente from './src/components/Cliente';
 import NuevoUsuario from './src/components/NuevoUsuario';
+import OffersHome from './src/components/OffersHome';
 
 
 export default function App() {
   return (
     //<Home/>
-    <Beneficios/>
+    <OffersHome/>
+    //<Login/>
+    //<Inicio/>
     //<Cliente/>
     //<NuevoUsuario/>
   );
