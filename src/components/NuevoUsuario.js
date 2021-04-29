@@ -4,31 +4,31 @@ import { StyleSheet, Text, View, Button, Image } from 'react-native';
 
 export default function NuevoUsuario() {
     return (
-      <View>
-        <View style={styles.container}>
-            <Image
-                style={styles.img}
-                source={require('./../img/bc01_190421mue.jpg')}
-            />
-            <Image
-                style={styles.tinyLogo}
-                source={require('./../img/logo1.png')}
-            />
-            <Text style={styles.textTitle}>¡No eres cliente de Liverpool,</Text> 
-            <Text style={styles.textTitle}>pero estas a un paso de serlo!</Text>
-            <Text style={styles.textSubTitle}>Te estas perdiendo miles de ofertas</Text>
-            <Text style={styles.textSubTitle}>y ahorros, ¡No esperes más!</Text>
-            <View style={styles.buttonContainer}>
-                <Button
-                    onPress={() => {
-                        alert('You tapped the button!');
-                    }}
-                    title="Registrarse"
-                    color="#E10098"
-                />
-            </View>
-        </View>
+
+      <View style={styles.container}>
+          <Image
+              style={styles.img}
+              source={require('./../img/bc01_190421mue.jpg')}
+          />
+          <Image
+              style={styles.tinyLogo}
+              source={require('./../img/logo1.png')}
+          />
+          <Text style={styles.textTitle}>¡No eres cliente de Liverpool,</Text> 
+          <Text style={styles.textTitle}>pero estas a un paso de serlo!</Text>
+          <Text style={styles.textSubTitle}>Te estas perdiendo miles de ofertas</Text>
+          <Text style={styles.textSubTitle}>y ahorros, ¡No esperes más!</Text>
+          <View style={styles.buttonContainer}>
+              <Button
+                  onPress={() => {
+                      alert('You tapped the button!');
+                  }}
+                  title="Registrarse"
+                  color="#E10098"
+              />
+          </View>
       </View>
+
     );
 }
 
@@ -62,7 +62,7 @@ const styles = StyleSheet.create({
     },
     img: {
       width: '100%', 
-      height: '150%',
+      height: '40%',
     },
     tinyLogo: {
       width: 500,

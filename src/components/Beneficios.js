@@ -16,9 +16,7 @@ export class Beneficios extends React.Component {
                 style={styles.tinyLogo}
                 source={require('./../img/logo1.png')}
             />
-            
-            <Text style={styles.textTitle}>Beneficios</Text>
-            <Text style={styles.textSubTitle}>De tarjetahabientes</Text>
+            <Text style={styles.textSubTitle}>Beneficios de tarjetahabientes</Text>
 
             <FlatList
             data={[

@@ -1,13 +1,11 @@
 import React from 'react';
 import { StyleSheet, Text, View, Image, ScrollView, Button } from 'react-native';
 import Card from './sections/card';
-import { Header } from './sections/Header';
 
 export default function OffersHome() {
     return (
         <View style={styles.container}>
             <ScrollView>
-                <Header message='Shop'/>
                 <View style={styles.cardContainer}>
                     <Card style={styles.card}>
                         <Image 

@@ -16,8 +16,11 @@ const Drawer = createDrawerNavigator();
 function MyDrawer() {
   return (
     <Drawer.Navigator initialRouteName="Home">
-      <Drawer.Screen name="Home" component={Home} />
-      <Drawer.Screen name="Offers" component={OffersHome} />
+      <Drawer.Screen name="Inicio" component={OffersHome} />
+      <Drawer.Screen name="Lista de deseos" component={OffersHome} />
+      <Drawer.Screen name="Pedidos" component={NuevoUsuario} />
+      <Drawer.Screen name="Cliente" component={Cliente} />
+      <Drawer.Screen name="Beneficios" component={Beneficios} />
     </Drawer.Navigator>
   );
 }
@@ -25,11 +28,11 @@ function MyDrawer() {
 export default function App() {
   return (
     //<Home/>
-    //<NavigationContainer>
-      //<MyDrawer />
-    //</NavigationContainer>
+    <NavigationContainer>
+      <MyDrawer />
+    </NavigationContainer>
     //<OffersHome/>
-    <Beneficios/>
+    //<Beneficios/>
     //<Cliente/>
     //<NuevoUsuario/>
   );

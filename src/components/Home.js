@@ -1,12 +1,9 @@
 import React from 'react';
-import {Header}  from './sections/Header';
 import { StyleSheet, Text, View, Image, TextInput } from 'react-native';
 
 export default function Home() {
     return (
-      <View>
-        <Header message='Shop'/>
-        
+      <View>        
         <View style={styles.container}>
           <Text style={styles.textTitle}>¡Bienvenido!</Text>
           <TextInput
