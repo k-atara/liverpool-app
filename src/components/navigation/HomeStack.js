@@ -1,10 +1,10 @@
 import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
-import Icon from 'react-native-vector-icons/FontAwesome';
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import HomeScreen from '../Home';
 
-const letIcon = (navigation, icon) =>{
-    <Icon
+const leftIcon = (navigation, icon) =>{
+    <MaterialCommunityIcons
         name = {icon}
         style={{ marginLeft: 20 }}
         size={20}
@@ -13,14 +13,14 @@ const letIcon = (navigation, icon) =>{
     />
 }
 
-const HomeStack = createStackNavigator({
+const HomeScreenStack = createStackNavigator({
     Home:{
         screen: HomeScreen,
-        navigationOptions: ({ navigation}) =>({
+        navigationOptions: ({ navigation }) =>({
             title: "Inicio",
             headerLeft: () => leftIcon(navigation, "bars")
         })
     }
 }) 
 
-export default HomeStack;
+export default HomeScreenStack;

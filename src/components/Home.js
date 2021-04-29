@@ -7,9 +7,8 @@ export default function Home() {
       <View>
         <Header message='Shop'/>
         
-        <Text style={styles.textTitle}>¡Bienvenido!</Text>
-        
         <View style={styles.container}>
+          <Text style={styles.textTitle}>¡Bienvenido!</Text>
           <TextInput
               style={styles.input}
               placeholder="Buscar"

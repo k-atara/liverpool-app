@@ -1,17 +1,17 @@
 import React from 'react';
-import { createAppContainer } from '@react-navigation/native';
+import { NavigationContainer } from '@react-navigation/native';
 import { createDrawerNavigator } from '@react-navigation/drawer';
-import Icon from 'react-native-vector-icons/FontAwesome'
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
 //ScreenStacks
-import HomeStack from './HomeStack';
+import HomeScreenStack from './HomeStack';
 
 const NavigationStacks = createDrawerNavigator({
     Home: {
-        screen: HomeStack,
+        screen: HomeScreenStack,
         navigationOptions: ({ tintColor }) => ({
             drawerLabel: "Inicio",
-            drawerIcon: () => <Icon name= "home" size={24} style={{color: tintColor}}/>
+            drawerIcon: () => <MaterialCommunityIcons name="home" size={24} style={{color: tintColor}}/>
         })
     }
 },
@@ -27,4 +27,4 @@ const NavigationStacks = createDrawerNavigator({
 }
 );
 
-export default createAppContainer(NavigationStacks);
+export default NavigationContainer(NavigationStacks);
