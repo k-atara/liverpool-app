@@ -11,11 +11,10 @@ import Navigation from './src/components/navigation/Navigation';
 
 export default function App() {
   return (
-    <Home/>
+    //<Home/>
     //<Navigation/>
-    //<OffersHome/>
-    //<Login/>
-    //<Inicio/>
+    <OffersHome/>
+    //<Beneficios/>
     //<Cliente/>
     //<NuevoUsuario/>
   );
