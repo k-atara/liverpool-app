@@ -54,7 +54,7 @@ export class Beneficios extends React.Component {
             <DialogContent>
                     <View  style={{alignItems: 'center', justifyContent: 'center'}}>
                         <Text style={styles.textTitle}>¡Mantente al tanto!</Text>
-                        <Text style={styles.textSubTitle}>No te pierdas ninguna de las próximas ofertas y ahorra en miles de pproductos</Text>
+                        <Text style={styles.textSubTitle}>No te pierdas ninguna de las próximas ofertas y ahorra en miles de productos</Text>
                     </View>
                     <View style={styles.buttonContainer}>
                         <Button
@@ -71,30 +71,6 @@ export class Beneficios extends React.Component {
                                 this.setState({visible:false})
                             }}
                             title="Ahora no"
-                            color="#E10098"
-                        />
-                    </View>
-            </DialogContent>
-            
-            </Dialog>
-
-            <Dialog
-                visible={this.state.visible}
-                onTouchOutside={() => {
-                this.setState({ visible: false });
-            }}
-            >
-            <DialogContent>
-                    <View  style={{alignItems: 'center', justifyContent: 'center'}}>
-                        <Text style={styles.textTitle}>¡Listo!</Text>
-                        <Text style={styles.textSubTitle}>Agrega más productos a tu carrito de compras</Text>
-                    </View>
-                    <View style={styles.buttonContainer}>
-                        <Button
-                            onPress={() => {
-                                this.setState({visible:false})
-                            }}
-                            title="Continuar"
                             color="#E10098"
                         />
                     </View>
@@ -138,7 +114,7 @@ const styles = StyleSheet.create({
         width: 500,
         height: 80,
         resizeMode: 'center',
-        margin: 50
+        margin: 10,
     },
     input: {
         height: 40,
@@ -148,8 +124,8 @@ const styles = StyleSheet.create({
       item: {
         marginRight: 30,
         marginLeft: 30,
-        marginTop: 20,
-        marginBottom: 20,
+        marginTop: 5,
+        marginBottom: 5,
         fontSize: 18,
         height: 50,
       },
