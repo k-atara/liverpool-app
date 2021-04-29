@@ -7,7 +7,7 @@ export default function OffersHome() {
     return (
         <View style={styles.container}>
             <ScrollView>
-                <Header></Header>
+                <Header message='Shop'/>
                 <View style={styles.cardContainer}>
                     <Card style={styles.card}>
                         <Image 

@@ -6,12 +6,14 @@ import {Beneficios} from './src/components/Beneficios';
 import Cliente from './src/components/Cliente';
 import NuevoUsuario from './src/components/NuevoUsuario';
 import OffersHome from './src/components/OffersHome';
-
+import {createSwitchNavigator} from 'react-navigation';
+import Navigation from './src/components/navigation/Navigation';
 
 export default function App() {
   return (
-    //<Home/>
-    <OffersHome/>
+    <Home/>
+    //<Navigation/>
+    //<OffersHome/>
     //<Login/>
     //<Inicio/>
     //<Cliente/>

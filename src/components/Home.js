@@ -6,6 +6,9 @@ export default function Home() {
     return (
       <View>
         <Header message='Shop'/>
+        
+        <Text style={styles.textTitle}>¡Bienvenido!</Text>
+        
         <View style={styles.container}>
           <TextInput
               style={styles.input}
