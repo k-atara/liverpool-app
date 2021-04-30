@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, Text, View, Image } from 'react-native';
 
-export class Header extends React.Component {
+export default class Header extends React.Component {
 
     constructor(props){
         super(props);
@@ -45,7 +45,7 @@ const styles = StyleSheet.create({
     },
     logoStyle:{
         flex: 1,
-        with: undefined,
+        width: undefined,
         height: undefined,
         resizeMode: 'center',
     },
