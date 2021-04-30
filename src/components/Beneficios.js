@@ -1,5 +1,5 @@
 import React from 'react';
-import {  FlatList, StyleSheet, Text, View, Button, Image, Modal } from 'react-native';
+import {  FlatList, StyleSheet, Text, View, Button, Image, Linking } from 'react-native';
 import Dialog, { DialogContent } from 'react-native-popup-dialog';
 
 export class Beneficios extends React.Component {
@@ -10,6 +10,7 @@ export class Beneficios extends React.Component {
     }
 
     render(){
+        const uri = 'https://micredito.liverpool.com.mx/app/card-request-init#';
         return(
             <View style={styles.container}>
             <Image
@@ -32,7 +33,7 @@ export class Beneficios extends React.Component {
             
             <View style={styles.buttonContainer}>
                 <Button
-                    onPress={() => {this.setState({show:true})}}
+                    onPress={() => {Linking.openURL(uri)}}
                     title="¡Obtener ahora!"
                     color="#E10098"
                 />
@@ -61,7 +62,7 @@ export class Beneficios extends React.Component {
                             onPress={() => {
                                 this.setState({visible:false})
                             }}
-                            title="Ahora si"
+                            title="Continuar"
                             color="#E10098"
                         />
                     </View>
@@ -70,7 +71,7 @@ export class Beneficios extends React.Component {
                             onPress={() => {
                                 this.setState({visible:false})
                             }}
-                            title="Ahora no"
+                            title="No gracias"
                             color="#E10098"
                         />
                     </View>
