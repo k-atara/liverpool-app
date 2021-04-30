@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View, Button } from 'react-native';
+import { StyleSheet, Text, View, Button , Image, TouchableHighlight} from 'react-native';
 
 import Home from './src/components/Home';
 import {Beneficios} from './src/components/Beneficios';
@@ -28,12 +28,38 @@ function MyDrawer() {
 export default function App() {
   return (
     //<Home/>
-    <NavigationContainer>
-      <MyDrawer />
-    </NavigationContainer>
+      <NavigationContainer>
+        <MyDrawer/>
+      </NavigationContainer>
     //<OffersHome/>
     //<Beneficios/>
     //<Cliente/>
     //<NuevoUsuario/>
   );
 }
+
+
+const styles = StyleSheet.create({
+  root: {
+      flex: 1,
+      flexDirection: "column",
+  },
+  menu: {
+      flex: 1,
+      flexDirection: "row",
+      justifyContent: 'center',
+      alignItems: 'center',
+      width: undefined,
+      height: 120,
+  },
+  imageLogo: {
+      resizeMode: 'contain',
+      width: 100,
+      height: 50,
+  },
+  menuButton: {
+      resizeMode: 'contain',
+      width: 25,
+      height: 25,
+  }
+});
