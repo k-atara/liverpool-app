@@ -18,8 +18,8 @@ function MyDrawer() {
     <Drawer.Navigator initialRouteName="Home">
       <Drawer.Screen name="Inicio" component={OffersHome} />
       <Drawer.Screen name="Lista de deseos" component={OffersHome} />
-      <Drawer.Screen name="Pedidos" component={NuevoUsuario} />
-      <Drawer.Screen name="Cliente" component={Cliente} />
+      <Drawer.Screen name="Registrar" component={NuevoUsuario} />
+      <Drawer.Screen name="Suscribirse" component={Cliente} />
       <Drawer.Screen name="Beneficios" component={Beneficios} />
     </Drawer.Navigator>
   );

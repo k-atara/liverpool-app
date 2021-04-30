@@ -1,6 +1,7 @@
 import React from 'react';
-import { StyleSheet, Text, View, Image, ScrollView, Button, TouchableHighlight, TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, View, Image, ScrollView, Button, TouchableHighlight, TouchableOpacity, Linking, } from 'react-native';
 import Card from './sections/card';
+import Dialog, { DialogContent } from 'react-native-popup-dialog';
 
 export default function OffersHome( { navigation }) {
     return (
@@ -29,12 +30,14 @@ export default function OffersHome( { navigation }) {
                             </Image>
                             <View style={styles.fixToText}>
                                 <Button
-                                    title="-"
-                                    onPress={() => Alert.alert('-')}
+                                    title="+"
+                                    onPress={() => {Linking.openURL('https://www.liverpool.com.mx/tienda/l%C3%ADnea-blanca/cat610025')}}
                                 />
                                 <Button
-                                    title="+"
-                                    onPress={() => Alert.alert('+')}
+                                    title="*"
+                                    onPress={() => {
+                                        alert('¡Listo añadido a favoritos!');
+                                    }}
                                 />
                             </View>
                         </Card>
@@ -46,12 +49,14 @@ export default function OffersHome( { navigation }) {
                             </Image>
                             <View style={styles.fixToText}>
                                 <Button
-                                    title="-"
-                                    onPress={() => Alert.alert('-')}
+                                    title="+"
+                                    onPress={() => {Linking.openURL('https://www.liverpool.com.mx/tienda/otras-categorias/catst16656479')}}
                                 />
                                 <Button
-                                    title="+"
-                                    onPress={() => Alert.alert('+')}
+                                    title="*"
+                                    onPress={() => {
+                                        alert('¡Listo añadido a favoritos!');
+                                    }}
                                 />
                             </View>
                         </Card>
@@ -65,12 +70,14 @@ export default function OffersHome( { navigation }) {
                             </Image>
                             <View style={styles.fixToText}>
                                 <Button
-                                    title="-"
-                                    onPress={() => Alert.alert('-')}
+                                    title="+"
+                                    onPress={() => {Linking.openURL('https://www.liverpool.com.mx/tienda/ni%C3%B1os-y-ni%C3%B1as/catst18406782')}}
                                 />
                                 <Button
-                                title="+"
-                                    onPress={() => Alert.alert('+')}
+                                    title="*"
+                                    onPress={() => {
+                                        alert('¡Listo añadido a favoritos!');
+                                    }}
                                 />
                             </View>
                         </Card>
@@ -82,12 +89,14 @@ export default function OffersHome( { navigation }) {
                             </Image>
                             <View style={styles.fixToText}>
                                 <Button
-                                    title="-"
-                                    onPress={() => Alert.alert('-')}
+                                    title="+"
+                                    onPress={() => {Linking.openURL('https://www.liverpool.com.mx/tienda?s=venta+nocturna')}}
                                 />
                                 <Button
-                                title="+"
-                                    onPress={() => Alert.alert('+')}
+                                    title="*"
+                                    onPress={() => {
+                                        alert('¡Listo añadido a favoritos!');
+                                    }}
                                 />
                             </View>
                         </Card>
@@ -101,12 +110,14 @@ export default function OffersHome( { navigation }) {
                             </Image>
                             <View style={styles.fixToText}>
                                 <Button
-                                    title="-"
-                                    onPress={() => Alert.alert('-')}
+                                    title="+"
+                                    onPress={() => {Linking.openURL('https://www.liverpool.com.mx/tienda/c%C3%B3mputo-y-electr%C3%B3nica/cat5150041')}}
                                 />
                                 <Button
-                                title="+"
-                                    onPress={() => Alert.alert('+')}
+                                    title="*"
+                                    onPress={() => {
+                                        alert('¡Listo añadido a favoritos!');
+                                    }}
                                 />
                             </View>
                         </Card>
@@ -118,12 +129,14 @@ export default function OffersHome( { navigation }) {
                             </Image>
                             <View style={styles.fixToText}>
                                 <Button
-                                    title="-"
-                                    onPress={() => Alert.alert('-')}
+                                    title="+"
+                                    onPress={() => {Linking.openURL('https://www.liverpool.com.mx/tienda/mujer/catst4003072')}}
                                 />
                                 <Button
-                                title="+"
-                                    onPress={() => Alert.alert('+')}
+                                    title="*"
+                                    onPress={() => {
+                                        alert('¡Listo añadido a favoritos!');
+                                    }}
                                 />
                             </View>
                         </Card>
@@ -193,5 +206,6 @@ const styles = StyleSheet.create({
         resizeMode: 'contain',
         width: 25,
         height: 25,
+        marginRight: 200,
     }
 });
